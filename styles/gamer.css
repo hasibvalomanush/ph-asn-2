@@ -167,8 +167,18 @@ nav li {
     /* height: 50vw; */
 }
 
-
-
+/* online games css */
+.online-games-container{
+    text-align: center;
+}
+.online-games-pics{
+    display: flex;
+    justify-content: space-between;
+}
+.online-games-pics div {
+    flex-basis: 25%;
+    text-align: center;
+}
 
 
 
@@ -181,4 +191,12 @@ nav li {
     nav , .goat-banner-container {
         flex-direction: column;
     }
+    .online-games-pics {
+        flex-wrap: wrap;
+    }
+
+    .online-games-pics div {
+        flex-basis: 50%;
+    }
+
 }
