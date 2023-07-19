@@ -8,6 +8,10 @@ header {
 
     padding: 0px 240px;
 }
+body{
+    margin: 0;
+    border: 0;
+}
 
 /* common  css */
 .primary-button {
@@ -272,6 +276,30 @@ nav li {
 .card-images:hover p {
     color: pink;
 }
+/* footer css */
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #0B0223;
+    color: #FFF;
+}
+
+.footer-content2 , .footer-content1 , .footer-content3 {
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    list-style: none;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+
+
+
+
 
 @media screen and (max-width : 576px) {
     header {
