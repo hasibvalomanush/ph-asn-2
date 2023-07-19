@@ -44,7 +44,7 @@ nav>ul {
     display: flex;
 }
 
-.logo {
+.logo , .footer-logo {
     display: flex;
     align-items: center;
     /* border: 2px solid salmon; */
@@ -53,13 +53,13 @@ nav>ul {
 
 }
 
-.logo-picture {
+.logo-picture , .footer-logo-picture {
     width: 86.041px;
     height: 40px;
     flex-shrink: 0;
 }
 
-.logo-tittle {
+.logo-tittle , .footer-logo-tittle {
     text-align: center;
     font-family: Work Sans;
     font-size: 45px;
@@ -168,29 +168,121 @@ nav li {
 }
 
 /* online games css */
-.online-games-container{
+.online-games-container {
     text-align: center;
 }
-.online-games-pics{
+
+.online-games-pics {
     display: flex;
     justify-content: space-between;
 }
+
 .online-games-pics div {
     flex-basis: 25%;
     text-align: center;
 }
 
+.img-container {
+    position: relative;
+}
+
+.img-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container .play-button {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-radius: 50%;
+}
 
 
+.img-3:hover {
+    filter: brightness(80%);
+}
+
+
+/* Play Instantly CSS */
+.play-instantly-container {
+    display: flex;
+
+    border: 2px solid salmon;
+    padding-left: 300px;
+    padding-right: 100px;
+
+
+}
+
+.play-instantly-tittle {
+    border: 2px solid salmon;
+    flex-basis: 50%;
+}
+
+.play-instantly-images {
+    border: 2px solid salmon;
+}
+
+.play-instantly-images1 {
+    width: 634.833px;
+    height: 650px;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+
+.play-instantly-images2 {
+    position: relative;
+    bottom: 300px;
+    right: 150px;
+    width: 318.5px;
+    height: 365.083px;
+    flex-shrink: 0;
+
+}
+
+/* card css */
+.card-container {
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    padding: 150px;
+    gap: 10px;
+}
+
+.card-images {
+    display: flex;
+    gap: 10px;
+}
+.card-images:hover {
+    border: 2px solid rgb(138, 50, 108);
+    border-radius: 50px;
+}
+
+.card-images:hover p {
+    color: pink;
+}
 
 @media screen and (max-width : 576px) {
     header {
         padding: 20px
     }
 
-    nav , .goat-banner-container {
+    nav,
+    .goat-banner-container {
         flex-direction: column;
     }
+
     .online-games-pics {
         flex-wrap: wrap;
     }
