@@ -14,6 +14,9 @@ body{
 }
 
 /* common  css */
+.special-alphabet{
+    color: #F948B2;
+}
 .primary-button {
     border: 0px;
     color: #FFF;
@@ -320,12 +323,12 @@ nav li {
     gap: 10px;
 }
 .card-images:hover {
-    border: 2px solid rgb(138, 50, 108);
+    border: 2px solid #F948B2;
     border-radius: 50px;
 }
 
 .card-images:hover p {
-    color: pink;
+    color:#F948B2;
 }
 /* footer css */
 .footer-container{
@@ -399,7 +402,9 @@ nav li {
         flex-basis: 50%;
     }
     .footer-content2, .footer-content1, .footer-content3 {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
         gap: 20px; 
         text-align: center;
         
