@@ -4,22 +4,18 @@
     font-family: 'Work Sans', sans-serif;
 }
 
-header {
-
-    padding: 0px 0px;
-}
-
 body {
-    margin: 0;
-    border: 0;
+    border: 0px;
+    margin: 0px;
 }
 
 /* common  css */
 .special-alphabet {
     color: #F948B2;
 }
-.p-color{
-    color:grey;
+
+.p-color {
+    color: grey;
 }
 
 .primary-button {
@@ -61,9 +57,9 @@ body {
     line-height: normal;
 }
 
+/* Nav Bar Css */
 .navigation {
     display: flex;
-
     width: 100vw;
     flex-shrink: 0;
     justify-content: space-between;
@@ -83,15 +79,17 @@ nav>ul {
     display: flex;
     align-items: center;
     /* border: 2px solid salmon; */
-    width: 35vh;
+    /* width: 30vh; */
     justify-content: space-between;
 
 }
 
 .logo-picture,
 .footer-logo-picture {
-    width: 86.041px;
-    height: 40px;
+    /* width: 86.041px;
+    height: 40px; */
+    max-width: 100%;
+    height: auto;
     flex-shrink: 0;
 }
 
@@ -118,7 +116,7 @@ nav li {
 }
 
 .nav-social-media {
-    width: 262px;
+    /* width: 262px; */
     height: 56px;
     flex-shrink: 0;
     border-radius: 8px;
@@ -130,17 +128,21 @@ nav li {
     gap: 15px;
 }
 
-/*  */
+/* nav bar css ends */
+/* goat banner css */
 .goat-banner-container {
 
     display: flex;
     /* border: 2px solid salmon; */
     margin-top: 50px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .goat-banner-tittle {
     background-image: url(../images/Group\ 14.png);
-    width: 901px;
+    max-width: 901px;
+    width: 100%;
     height: 700px;
     flex-shrink: 0;
     fill: linear-gradient(223deg, rgba(140, 87, 238, 0.03) 0%, rgba(241, 68, 174, 0.03) 100%);
@@ -202,9 +204,11 @@ nav li {
 
 .goat-banner-image {
     width: 100%;
+    overflow-x: hidden;
     /* height: 50vw; */
 }
 
+/* goat banner ends */
 /* online games css */
 .online-games-container {
     text-align: center;
@@ -274,14 +278,9 @@ nav li {
     opacity: 1;
 }
 
+/* online games css ends */
 
-
-
-
-
-/* Play Instantly CSS */
-
-
+/* play instantly css */
 .play-instantly-container {
     display: flex;
     justify-content: center;
@@ -318,7 +317,6 @@ nav li {
     max-width: 100%;
     max-height: 100%;
 }
-
 
 /* card css */
 .card-container {
@@ -368,130 +366,227 @@ nav li {
 
 
 
+/* Mobile responsive */
+@media screen and (Max-width: 576px) {
 
-/* For Mobile */
+    /* nav bar  */
+    .navigation {
 
-@media screen and (max-width : 576px) {
-    header {
-        padding: 20px
+        display: flex;
+        flex-direction: column;
+
+
     }
 
-    nav,
+    .logo-lists {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    /* nav bar ends */
+    /* goat banner css */
     .goat-banner-container {
-        flex-direction: column;
-        padding: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+
     }
 
-    .nav-links {
-        justify-content: center;
-    }
-
-    .logo {
-        width: auto;
-        margin-bottom: 20px;
-    }
-
-    .logo-picture {
-        width: 60px;
-        height: auto;
-    }
-
-    .logo-tittle {
-        font-size: 30px;
-    }
-
-    nav>li {
-        flex-direction: column;
-        margin: 10px 0;
-    }
-
-    .nav-social-media {
+    /* goat banner ends */
+    /* online games */
+    .online-games-pics img {
         width: 50%;
-
-    }
-
-
-    .online-games-pics,
-    r {
-        flex-wrap: wrap;
-    }
-
-    .online-games-pics div,
-    {
-    flex-basis: 50%;
-}
-
-.footer-content2,
-.footer-content1,
-.footer-content3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-
-}
-.footer-content3{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    padding: 50px;
-}
-
-.play-instantly-container {
-    flex-direction: column;
-    padding: 10px;
-}
-
-.play-instantly-tittle,
-.play-instantly-images {
-    width: 100%;
-}
-
-.play-instantly-images2 {
-    position: static;
-    bottom: auto;
-    right: auto;
-    margin-top: 15px;/n mobile */
-}
-}
-
-/* For Tablet */
-@media screen and (min-width : 576px) and (max-width : 992px) {
-    header {
-        padding: 20px
-    }
-
-    nav,
-    .goat-banner-container {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .card-container {
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        padding: 0px;
-    }
-
-    .footer-content2,
-    .footer-content1,
-    .footer-content3 {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-
     }
 
     .online-games-pics {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .img-container .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 72%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
         justify-content: center;
+        border-radius: 15px;
+    }
+
+    /* online game ends */
+    /* play instantly */
+    .play-instantly-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .play-instantly-tittle {
+        width: 100%;
+    }
+
+    .play-instantly-images {
+        width: 100%;
+    }
+
+    /* .play-instantly-images2 {
+        position: static;
+        bottom: auto;
+        right: auto;
+        margin-top: 15px;
+    } */
+    .play-instantly-images2 {
+        position: relative;
+        bottom: -50px;
+        right: 250px;
+    }
+
+    /* play instanlty ends */
+    /* card css */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        padding: 50px;
+    }
+
+    /* footer css */
+    .footer-content2,
+    .footer-content1,
+    .footer-content3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
 
     }
+
+    .footer-content3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+
+
+
+
+
+/* Tab responsive */
+@media screen and (min-width : 576px) and (max-width : 992px) {
+
+    /* nav bar  */
+    .navigation {
+
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .logo-lists {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    /* nav bar ends */
+
+    /* Goat banner */
+    .goat-banner-container {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    /* goat banner ends */
+    /* online games */
+    .online-games-pics img {
+        width: 50%;
+    }
+
+    .online-games-pics {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .img-container .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 90%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+    }
+
+    /* online game ends */
+    /* play instantly */
+    .play-instantly-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .play-instantly-tittle {
+        width: 100%;
+    }
+
+    .play-instantly-images {
+        width: 100%;
+
+    }
+
+    /* .play-instantly-images2 {
+                position: static;
+                bottom: auto;
+                right: auto;
+                margin-top: 15px;
+            } */
+    .play-instantly-images2 {
+        position: relative;
+        bottom: -150px;
+        right: 550px;
+    }
+
+    /* play instanlty ends */
+
+    /* card css */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        padding: 50px;
+    }
+
+    /* footer css */
+    .footer-content2,
+    .footer-content1,
+    .footer-content3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+
+    }
+
+    .footer-content3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
